@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <!--
 	Josiah Neuberger
-	Uses Base HTML Site by:
+	Uses template HTML Site by:
 	---------------------------------
 	Escape Velocity 2.0 by HTML5 UP
 	html5up.net | @n33co
@@ -21,6 +21,7 @@
 		<script src="js/config.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
+		<script language="JavaScript" src="JS/gen_validatorv31.js" type="text/javascript"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -37,7 +38,7 @@
 						
 							<!-- Header -->
 								<div id="header">
-									 
+									
 									<!-- Logo -->
 										<div id="logo">
 											<h1><a href="#">Citation Prediction Project</a></h1>
@@ -138,19 +139,19 @@
 
 												<!-- Contact Form -->
 													<section class="footer-one">
-														<form method="post" action="#">
+														<form method="post" name="contactform" action="contact-form-handler.php">
 															<div>
 																<div class="row half">
 																	<div class="6u">
-																		<input type="text" class="text" name="name" id="contact-name" placeholder="Name" />
+																		<input type="text" class="text" name="name" id="name" placeholder="Name" />
 																	</div>
 																	<div class="6u">
-																		<input type="text" class="text" name="name" id="contact-email" placeholder="Email" />
+																		<input type="text" class="text" name="email" id="email" placeholder="Email" />
 																	</div>
 																</div>
 																<div class="row half">
 																	<div class="12u">
-																		<textarea name="message" id="contact-message" placeholder="Message"></textarea>
+																		<textarea name="message" id="message" placeholder="Message"></textarea>
 																	</div>
 																</div>
 																<div class="row">
@@ -163,6 +164,19 @@
 																</div>
 															</div>
 														</form>
+														<script language="JavaScript">
+														// Code for validating the form
+														// Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+														// for details
+														var frmvalidator  = new Validator("contactform");
+														frmvalidator.addValidation("name","req","Please provide your name"); 
+														frmvalidator.addValidation("email","req","Please provide your email"); 
+														frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+														</script>
+														<!--
+														Sample code from:
+														http://www.html-form-guide.com/contact-form/php-email-contact-form.html
+														-->
 													</section>
 												<!-- /Contact Form -->
 
