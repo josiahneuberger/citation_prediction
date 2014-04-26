@@ -53,8 +53,8 @@
 									<!-- Nav -->
 										<nav id="nav">
 											<ul>
-												<li class="current_page_item"><a href="index.html">Home</a></li>
-												<li><a href="#reading">Additional Background Info</a></li>
+												<li><a href="index.html">Home</a></li>
+												<li class="current_page_item"><a href="index.html#reading">Additional Background Info</a></li>
 												<li><a href="https://github.com/josiahneuberger/citation_prediction" target="_blank">GitHub Project Page</a></li>
 												<li><a href="#footer">Acknowledgements</a></li>	
 											</ul>
@@ -80,16 +80,13 @@
 							<!-- Main -->
 								<div id="main">
 									
-									<div class="jos_std">
-										The newest version of the source code for this project along with a runnable jar file can
-										be found on github:
-										<br>
+									<section id="pickupgamesdemo">
 										
+										<a target="_blank" href="cs491_v12_neuberger_will.pdf">Click here to download PDF of paper</a>
+										<br><br>
+										<embed src="cs491_v12_neuberger_will.pdf" width="1200" height="1000">
 									
-										<ul class="actions">
-											<li><a target="_blank" style="background-color:DarkSlateGray" href="https://github.com/josiahneuberger/citation_prediction" class="button button-style2 button-big">Citation and Prediction Project Code/Software</a></li>
-										</ul>
-									</div>
+									</section>
 									
 									
 									
@@ -100,87 +97,7 @@
 					</div>
 				</div>
 			</div>
-		<!-- /Main Wrapper -->
-		
-		<!-- Intro Wrapper -->
-			<div id="intro-wrapper" class="wrapper wrapper-style2">
-				<div class="title">Project Introduction</div>
-				<div class="container">
-					<div class="row">
-						<div class="8u">
-							
-							<!-- Intro -->
-								<section id="intro">
-									
-									<div class="jos_std">
-										The Citation Prediction Project was originally a collaborative project between the University of Mary Washington
-										and the Dahlgren Naval Surface Warfare Center. At the end of the semester, the code was released as an open source
-										project by the two student researchers (Josiah Neuberger and William Etcho) after obtaining appropriate permission from all involved.
-										<br><br>
-										
-										<h1 style="font-size:1.5em"><b><u>Background Information</b></u></h1>
-										<div style="margin-left:30px">
-										
-											
-											In the paper <i>Quantifying Long-Term Scientific Impact</i>, Wang, Song and Barabasi (WSB) showed how the citation history 
-											of a paper can be used to predict future citation patterns and long-term scientific impact.  They start by 
-											identifying the three fundamental mechanisms that drive the citation history of individual papers. First, 
-											preferential attachment uses the fact that more visible or highly cited papers are more likely to be cited again.  
-											Second, aging takes into account that new ideas or publications will integrate the work from previously cited papers 
-											and thus will lead to fewer citations in the future.  Last, fitness captures a paper's importance relative to other papers 
-											and is a measurable quantity they term as “Relative Fitness”.
-											<br><br>
-											The project makes use of the WSB Triple discussed in the WSB paper, which is a vector of the three values mentioned above:
-											<br><br>
-											<ul style="margin-left:15px"><li>&#955 - Relative Fitness</li>
-											<li>&#956 - Immediacy</li>
-											<li>&#963 - Longevity</li></ul>
-											This project is an engineered solution to finding the WSB Triple using a paper's citation history of at least 5 years or more. 
-											The software is written was prototyped in R and implemented in <a href="http://www.java.com/en/" target="_blank">Java</a>. 
-											The software system requires the paper's citation history 
-											to be placed in the 'papers' directory using a CSV file. The CSV file should have each paper’s data in a single row. The first 
-											two columns providing identifying information: some kind of integer id and a 4 digit year. The remaining columns are dedicated 
-											to the citation history of the paper. Each one should contain a year’s worth of citations. If the paper received no citations for 
-											a year than the file should contain 0 in that column, ie:<br><br>
-											<div style="margin-left:15px">3040403,1950,3,4,0,10,0,0.....,0</div>
-											<br>
-											This paper received 3 citations from time=0 (publishing) to time=1 year, 4 in the second, 0 in the third, 10 in the 4th, et cetera. 
-											
-											<code>		
-											The software will give the user the option to select a paper to process (or you can process the whole file). The software will 
-											attempt to find three WSB solutions using 5 years, 10 years, and all years of the citation history as training for the algorithm. 
-											The software will also show the solution graphed in a formula extracted from the WSB paper for predicting future citations. This graph 
-											will be saved under the directory 'saved_plots\&ltname_of_file_containing_paper_citation_data&gt\'.
-											<br>
-											<br>
-											Before you use the software or this source code you should really read additional background material not covered here. Please refer 
-											to the next section for links to these sources and others related to this project.
-											<br><br>
-										</div>
-										
-										<h1 id="reading" style="font-size:1.5em"><b><u>Links to Additional Reading</b></u></h1>
-										<div style="margin-left:30px">
-											
-											<ul><li><a href="http://www.sciencemag.org/content/342/6154/127.full.html" target="_blank"><i>Quantifying Long-Term Scientific Impact</i> by WSB</a></li>
-											<li><a href="http://www.sciencemag.org/content/suppl/2013/10/02/342.6154.127.DC1.html" target="_blank">WSB Supplemental Material</a></li>
-											<li><a href="paper.html"><i>Engineering a Software Solution for finding a WSB Triple</i> by Neuberger and Etcho</a></li></ul>
-										</div>
-									
-									</div>
-									
-									
-									
-								</section>
-							<!-- /Intro -->
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		<!-- /Intro Wrapper -->
-		
-		
-		
+		<!-- /Main Wrapper -->	
 		
 
 		<!-- Footer Wrapper -->
