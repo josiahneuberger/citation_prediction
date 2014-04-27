@@ -91,6 +91,22 @@ import org.math.plot.plotObjects.BaseLabel;
  *<br>  
  *  The graphs are all done using the jmathplot library (BSD 3-clause License), which can be found at:<br>
  *  	http://code.google.com/p/jmathplot/
+ *  
+ *  <br><br>
+ *  License:<br>
+ *  <br>
+ *  Copyright 2014 Josiah Neuberger & William Etcho<br>
+ *  Licensed under the Apache License, Version 2.0 (the "License");<br>
+ *  you may not use this file except in compliance with the License.<br>
+ *  You may obtain a copy of the License at<br>
+ *<br>
+ *  http://www.apache.org/licenses/LICENSE-2.0<br>
+ *<br>
+ * Unless required by applicable law or agreed to in writing, software<br>
+ * distributed under the License is distributed on an "AS IS" BASIS,<br>
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>
+ * See the License for the specific language governing permissions and<br>
+ * limitations under the License.<br>
  */
 
 public class CitationCore {
