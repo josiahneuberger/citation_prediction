@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project citation_prediction with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required-->             
+    <!--You must create the jar-in-jar-loader.zip for this buildfile to work correctly.-->
+	<!--reference: http://auralbits.blogspot.com/2010/10/automating-java-application-packaging.html-->
+    <target name="create_run_jar">
+        <jar destfile="dist/citation_prediction.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="citation_prediction.CitationCore"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ jmathplot.jar commons-csv-1.0-20140212.162141-252.jar commons-math3-3.2.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="bin"/>
+            <zipfileset dir="lib" includes="jmathplot.jar"/>
+            <zipfileset dir="lib" includes="commons-csv-1.0-20140212.162141-252.jar"/>
+            <zipfileset dir="lib" includes="commons-math3-3.2.jar"/>
+        </jar>
+    </target>
+</project>
