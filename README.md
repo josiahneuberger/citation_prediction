@@ -5,3 +5,9 @@ A software system that "Quantifying Long-Term Scientific Impact" using the WSB T
 
 Project website:
 http://josiahneuberger.github.io/citation_prediction/
+
+Tags:
+josiahneuberger
+Josiah Neuberger
+wikimylife
+wikimylife.org
